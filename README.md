@@ -83,13 +83,3 @@ If a member is added or leaves a staging tontine, a reconfirmation is triggered.
 Throughout the course of the tontine eventually one member will be the last one who checked in during the check in window. However, if that member fails to claim the funds after this point + the grace period, the tontine will transition into fallback mode, in which case anyone (not just those in the tontine) may execute the fallback policy.
 
 This initially corresponds to `OVERALL_STATUS_FUNDS_NEVER_CLAIMED` and then `OVERALL_STATUS_FALLBACK_EXECUTED`
-
-## FAQ
-Q: Can I make the tontine with assets besides APT?
-A: For now, no, but I'm considering how you might do this: https://github.com/banool/aptos-tontine/issues/3.
-
-Q: Is there a way to direct the account holding the tontine funds to take investment actions, such as using liquid staking or purchasing NFTs?
-A: Not right now, but it's on the roadmap: https://github.com/banool/aptos-tontine/issues/1, https://github.com/banool/aptos-tontine/issues/2.
-
-Q: In real life / fictional tontines, it is generally a rule that attempting to "take out" a member of the tontine would get you kicked out of the tontine, so as to discourage people forcibly making themselves the last member standing. How is this enforced with the Aptos tontine?
-A: It is not. Theoretically a tontine could be created with governance attached, in which, if every other remaining member votes to do so, they could kick a member out of the tontine (except in the case where only 2 members remain remaining case). This could obviously lead to all kinds of off chain collusion / corruption however, so for now I've chosen to leave this is an unsolved problem.
